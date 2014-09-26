@@ -1,0 +1,97 @@
+body {
+  background-color: #29508b;
+  font-family: Verdana, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  font-size: 14px;
+}
+
+input.text {
+  height: 30px;
+  border: 1px solid #3385ff;
+  padding: 4px 10px;
+}
+
+input.button {
+  height: 40px;
+  border: 0;
+  border-top: 1px solid #3385ff;
+  color: white;
+  background-color: #3385ff;
+  letter-spacing: 5px;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+
+h3 {
+  margin: 0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a.blue-link {
+  color: #3377BB;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 15px 0;
+}
+
+form#search {
+  margin-bottom: 20px;
+}
+
+form#search .counter-info {
+  float: right;
+  margin-top: 25px;
+}
+
+.content-container {
+  background: none repeat scroll 0 0 #fcfcfc;
+  box-shadow: 1px 1px 8px black;
+  margin: 0 auto;
+  padding: 50px;
+  width: 900px;
+}
+
+.blank-line {
+  height: 15px;
+}
+
+.dividing-line {
+  height: 5px;
+  background-color: #e0e0e0;
+}
+
+.infomation {
+  color: gray;
+}
+
+.center {
+  text-align: center;
+}
+
+.pagination-container {
+  margin: 15px 0;
+}
+
+.pagination-container .page-slot {
+  border: 1px solid #e0e0e0;
+  padding: 15px 10px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.pagination-container .active {
+  background-color: #3385ff;
+}
+

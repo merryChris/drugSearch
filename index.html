@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-</head>
-<body>
-<form id="q" method="post">
-  <input id="name">
-  <input type="submit" value="搜索">
-</form>
-<script src="http://libs.useso.com/js/jquery/1.11.1/jquery.min.js"></script>
-<script>
-$("form#q").submit(function(e) {
-  e.preventDefault();
-  $.ajax({
-    type: "get",
-    url: "search.php",
-    data: {
-      name: $("input#name").val(),
-      //base: <?=$base?>
-    },
-    dataType: "json",
-    success: function(drugs) {
-      $("body").append(drugs.count);
-      var html = "";
-      for (var i = 0; i < drugs.length; i++) {
-        var drug = drugs[i];
-        html += ("<li>" + drug.name + " - " + drug.company_name + "</li>");
-      }
-      html = "<ul>" + html + "</ul>";
-      $("body").append(html);
-    }
-  });
-});
-</script>
-</body>
+  <head>
+    <meta http-equiv='content-type' content-type='text/html' charset='utf-8'>
+    <title>Drug Search Demo</title>
+    <script type='text/javascript' src='http://libs.useso.com/js/jquery/1.11.1/jquery.min.js'></script>
+    <script type='text/javascript' src='http://underscorejs.org/underscore-min.js'></script>
+    <script type='text/javascript'>
+    (function($) {
+     $(document).ready(function() {
+       var head = $('head')[0];
+
+       <!-- TODO: ZACKY, NEED TO RENDER ALL THE FILES LIKE 'js/*' and 'css/*'. -->
+       var script = document.createElement('script');
+       script.type = 'text/javascript';
+       script.src = 'js/event_handler.js';
+       head.appendChild(script);
+
+       var link = document.createElement('link');
+       link.type = 'text/css';
+       link.rel = 'stylesheet';
+       link.media = 'screen';
+       link.href = 'css/layout.css';
+       head.appendChild(link);
+     });
+    }).call(this, jQuery);
+    </script>
+  </head>
+
+  <body>
+    <div class='content-container'>
+      <form id='search' method='post' accept-charset='utf-8'>
+        <div class='search-container'>
+          <input id='name' class='text'>
+          <input class='button' type='submit' value='Search'>
+          <span class='counter-info'></span>
+        </div>
+        <div class='dividing-line'></div>
+        <div class='result-container'></div>
+        <div class='pagination-container'></div>
+      </form>
+
+      <div class='version-container'>
+        <div class='blank-line'></div>
+        <div class='infomation center'>© 2014 Lab 302 Inc. All rights reserved.</div>
+      </div>
+    </div>
+  </body>
 </html>
