@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv='content-type' content-type='text/html' charset='utf-8'>
     <title>Drug Search Demo</title>
-    <script type='text/javascript' src='http://libs.useso.com/js/jquery/1.11.1/jquery.min.js'></script>
+    <script type='text/javascript' src='http://code.jquery.com/jquery-2.1.0.min.js'></script>
     <script type='text/javascript' src='http://underscorejs.org/underscore-min.js'></script>
     <script type='text/javascript'>
     (function($) {
@@ -29,20 +29,36 @@
 
   <body>
     <div class='content-container'>
-      <form id='search' method='post' accept-charset='utf-8'>
-        <div class='search-container'>
-          <input id='name' class='text'>
-          <input class='button' type='submit' value='Search'>
-          <span class='counter-info'></span>
-        </div>
-        <div class='dividing-line'></div>
-        <div class='result-container'></div>
-        <div class='pagination-container'></div>
-      </form>
+      <div class='display-container'>
+        <form id='search' method='post' accept-charset='utf-8'>
+          <div class='search-container'>
+            <input id='name' class='text'>
+            <input class='button' type='submit' value='Search'>
+          </div>
+          <div class='blank-line'></div>
+          <div class='result-header'>
+            <span class='tab'></span>
+            <span class='counter-info'></span>
+          </div>
+          <div class='dividing-line'></div>
+
+          <div class='result-container'>
+            <div class='result-content'></div>
+            <div class='pagination-container'></div>
+          </div>
+
+          <div class='detail-container' style='display: none;'>
+            <div class='pic-slot'></div>
+            <div class='info-slot'></div>
+            <input class='button pull-right back-btn' type='button' value='Back'>
+          </div>
+        </form>
+      </div>
+
 
       <div class='version-container'>
         <div class='blank-line'></div>
-        <div class='infomation center'>© 2014 Lab 302 Inc. All rights reserved.</div>
+        <div class='infomation center'>© 2014 Lab 302 Inc. All Rights Reserved.</div>
       </div>
     </div>
   </body>

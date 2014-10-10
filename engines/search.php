@@ -17,7 +17,7 @@ $pdo  = PdoAdapter::getInstance();
 $sql1 = "SELECT count(*) AS counter ".
         "FROM drug_approve_info ".
         "WHERE name like '%$query_name%';";
-$sql2 = "SELECT id, name, approval_num, company_name ".
+$sql2 = "SELECT id, name, approval_num, company_name, drug_function_id ".
         "FROM drug_approve_info ".
         "WHERE name like '%$query_name%' ".
         "LIMIT $start_id, $RESULT_TO_SHOW_PER_PAGE;";

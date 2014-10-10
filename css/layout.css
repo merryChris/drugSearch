@@ -19,6 +19,7 @@ input.button {
   letter-spacing: 5px;
   padding-left: 10px;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 h3 {
@@ -30,10 +31,7 @@ a:hover {
 }
 
 a.blue-link {
-  color: #3377BB;
-  text-decoration: none;
-  cursor: pointer;
-}
+  color: #3377BB; text-decoration: none; cursor: pointer; }
 
 ul {
   list-style: none;
@@ -50,9 +48,20 @@ form#search {
   margin-bottom: 20px;
 }
 
+form#search .tab {
+  background: #4CA0D8;
+  color: white;
+  display: inline-block;
+  line-height: 30px;
+  cursor: pointer;
+}
+
 form#search .counter-info {
   float: right;
-  margin-top: 25px;
+}
+
+.pull-right {
+  float: right;
 }
 
 .content-container {
@@ -78,6 +87,36 @@ form#search .counter-info {
 
 .center {
   text-align: center;
+}
+
+.result-container, .detail-container {
+  margin-top: 20px;
+}
+
+.pic-slot, .info-slot {
+  display: inline-block;
+}
+
+.pic-slot {
+  margin-top: 18px;
+  vertical-align: top;
+  text-align: center;
+}
+
+.drug-content {
+  margin-bottom: 20px;
+}
+
+.drug-tab {
+  width: 100px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.drug-detail {
+  width: 500px;
+  line-height: 20px;
+  display: inline-block;
 }
 
 .pagination-container {
